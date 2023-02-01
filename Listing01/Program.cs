@@ -12,6 +12,7 @@ namespace Listing01
             Console.Write("Введите ваше имя: ");
             name = Console.ReadLine();
             Console.WriteLine("Очень приятно, " + name);
+            Console.WriteLine("Внёс изменения");
         }
     }
 }
