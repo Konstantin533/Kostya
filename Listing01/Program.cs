@@ -10,9 +10,8 @@ namespace Listing01
         {
             Console.WriteLine("\t\t\t\t\tЗадание 1.");
             Console.WriteLine();
-            int num;
             Console.Write("Введите номер месяца, для определения поры года: ");
-            num = Convert.ToInt32(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
             {
                 case 12:
@@ -45,9 +44,8 @@ namespace Listing01
             Console.WriteLine("\t\t\t\t\tЗадание 2.");
             Console.WriteLine();
 
-            int num1;
             Console.Write("Введите номер месяца, для определения поры года: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine());
 
             if (num1 == 1 || num1 == 12 || num1 == 2)
             {
@@ -72,19 +70,19 @@ namespace Listing01
 
             Console.WriteLine("\t\t\t\t\tЗадание 3.");
             Console.WriteLine();
-            int num2;
+            
 
             Console.Write("Введите число: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(num2 % 2 == 0 ? "Число чётное" : "Число нечётное");
 
 
 
             Console.WriteLine("\t\t\t\t\tЗадание 4.");
             Console.WriteLine();
-            int t;
+            
             Console.Write("Введите температуру на улице: ");
-            t = Convert.ToInt32(Console.ReadLine());
+            int t = Convert.ToInt32(Console.ReadLine());
             if (t > -5) Console.WriteLine("Тепло");
             else if (-5 >= t && t > -20) Console.WriteLine("Нормально");
             else if (-20 >= t) Console.WriteLine("Холодно");
@@ -92,9 +90,9 @@ namespace Listing01
 
             Console.WriteLine("\t\t\t\t\tЗадание 5.");
             Console.WriteLine();
-            int num3;
+            
             Console.Write("Введите номер, для определения цвета радуги: ");
-            num3 = Convert.ToInt32(Console.ReadLine());
+            int num3 = Convert.ToInt32(Console.ReadLine());
 
             switch (num3)
             {
