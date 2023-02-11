@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Text;
+using System.Text.RegularExpressions;
 
 
 namespace Listing01
@@ -8,122 +9,196 @@ namespace Listing01
     {
         static void Main()
         {
-            Console.WriteLine("\t\t\t\t\tЗадание 1.");
-            Console.WriteLine();
-            Console.Write("Введите номер месяца, для определения поры года: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            switch (num)
+            //Задание 1.
+
+            int numOne = 0, numTwo = 1, mySize = 11;
+
+
+
+            Console.WriteLine("Диапозон Фибоначчи: ");
+
+
+            Console.Write(numOne + " ");
+
+            while (mySize - 1 > 0)
             {
-                case 12:
-                case 1:
-                case 2:
-                    Console.WriteLine("Зима");
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    Console.WriteLine("Весна");
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    Console.WriteLine("Лето");
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    Console.WriteLine("Осень");
-                    break;
-                default:
-                    Console.WriteLine("Такого месяца не существует!В году 12 месяцев");
 
-                    break;
+                numOne = numTwo + numOne;
 
+                numTwo = numOne - numTwo;
+
+
+                Console.Write(numOne + " ");
+
+                mySize--;
             }
 
-            Console.WriteLine("\t\t\t\t\tЗадание 2.");
             Console.WriteLine();
 
-            Console.Write("Введите номер месяца, для определения поры года: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            // Задание 2.
+            Console.Write("Введите сумму вклада: ");
+            float sum = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Введиет срок вклада в месяцах: ");
+            int period = Convert.ToInt32(Console.ReadLine());
 
-            if (num1 == 1 || num1 == 12 || num1 == 2)
+            for (int i = 0; i < period; i++)
             {
-                Console.WriteLine("Зима");
+                sum = sum + sum * 0.07f;
             }
-            else if (num1 == 3 || num1 == 4 || num1 == 5)
+            Console.WriteLine($"За {period} месяцев сумма вклада будет составлять {sum}");
+
+
+
+            //Задание 4.
+
+            bool Here = true;
+            while (Here)
             {
-                Console.WriteLine("Весна");
-            }
-            else if (num1 == 6 || num1 == 7 || num1 == 8)
-            {
-                Console.WriteLine("Лето");
-            }
-            else if (num1 == 9 || num1 == 10 || num1 == 11)
-            {
-                Console.WriteLine("Осень");
-            }
-            else
-            {
-                Console.WriteLine("Такого месяца не существует!В году 12 месяцев");
+                Random rnd = new Random();
+                Console.Write("Введите размер массива: ");
+                int size = Convert.ToInt32(Console.ReadLine());
+                int[] newArray = new int[size];
+                int FutureArrayLength = 0;
+                if (size > 5 & size <= 10)
+                {
+
+                    Here = false;
+                    for (int i = 0; i < newArray.Length; i++)
+                    {
+                        newArray[i] = rnd.Next(1, 20);
+                        Console.WriteLine(newArray[i]);
+                        if (newArray[i] % 2 == 1)
+                        {
+                            FutureArrayLength++;
+                        }
+
+                    }
+                    Console.WriteLine("Массив с нечетными числами");
+                    int[] starArray = new int[FutureArrayLength];
+                    int iterationForAppend = 0;
+                    for (int i = 0; i < newArray.Length; i++)
+                    {
+
+                        if (newArray[i] % 2 == 1)
+                        {
+
+                            if (iterationForAppend != starArray.Length)
+                            {
+                                starArray[iterationForAppend] = newArray[i];
+
+                                iterationForAppend++;
+
+
+                            }
+
+                        }
+
+                    }
+                    for (int i = 0; i < starArray.Length; i++)
+                    {
+                        Console.WriteLine(starArray[i]);
+                    }
+
+
+
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели неверны данные! Попробуйте снова!");
+                }
+
+
             }
 
-            Console.WriteLine("\t\t\t\t\tЗадание 3.");
+
+
+            //Задание 5.
+
+            int[] myArr = new int[5];
+            Random rand = new Random();
+
+            for (int i = 0; i < myArr.Length; i++)
+            {
+                myArr[i] = rand.Next(1, 20);
+                Console.Write(myArr[i] + "\t");
+
+
+            }
             Console.WriteLine();
-            
 
-            Console.Write("Введите число: ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(num2 % 2 == 0 ? "Число чётное" : "Число нечётное");
+            for (int i = 0; i < myArr.Length; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    myArr[i] = 0;
 
+                }
 
-
-            Console.WriteLine("\t\t\t\t\tЗадание 4.");
+                Console.Write(myArr[i] + "\t");
+            }
             Console.WriteLine();
-            
-            Console.Write("Введите температуру на улице: ");
-            int t = Convert.ToInt32(Console.ReadLine());
-            if (t > -5) Console.WriteLine("Тепло");
-            else if (-5 >= t && t > -20) Console.WriteLine("Нормально");
-            else if (-20 >= t) Console.WriteLine("Холодно");
+            //Задание 6.
+            string[] names = new string[7] { "Сергей", "Александр", "Константин", "Артём", "Генадий", "Игорь", "Олег" };
+            Console.WriteLine("Массив до сортировки");
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.Write($"{names[i]}/ ");
+            }
+            Console.WriteLine("\nМассив после сортировки");
 
-
-            Console.WriteLine("\t\t\t\t\tЗадание 5.");
+            Array.Sort(names);
+            for (int i = 0; i < names.Length; i++)
+            {
+                Console.Write($"{names[i]}/ ");
+            }
             Console.WriteLine();
-            
-            Console.Write("Введите номер, для определения цвета радуги: ");
-            int num3 = Convert.ToInt32(Console.ReadLine());
 
-            switch (num3)
+            //Задание 7. Метод пузырька.
+
+            char s;
+            char[] symbs = { 'Q', 'f', 't', 'w', 'A', 'ы', 'а', 'r', 'q', 'b', 'A' };
+            Console.WriteLine("Массив до сортировки: ");
+            for (int i = 0; i < symbs.Length; i++)
+            {
+                Console.Write(symbs[i] + " ");
+            }
+            Console.WriteLine();
+            for (int k = 1; k < symbs.Length; k++)
+            {
+                for (int j = 0; j < symbs.Length - k; j++)
+                {
+                    if (symbs[j] > symbs[j + 1])
+                    {
+                        s = symbs[j + 1];
+                        symbs[j + 1] = symbs[j];
+                        symbs[j] = s;
+                    }
+                }
+            }
+            Console.WriteLine("Массив после сортировки: ");
+            for (int i = 0; i < symbs.Length; i++)
+            {
+                Console.Write(symbs[i] + " ");
+            }
+            Console.WriteLine();
+
+            //Задание 5. String
+            Console.Write("Введите текст: ");
+            string myText = Console.ReadLine();
+
+            string duplicatText;
+
+            for (int i = 0; i < myText.Length; i++)
             {
 
-                case 1:
-                    Console.WriteLine("Красный");
-                    break;
-                case 2:
-                    Console.WriteLine("Оранжевый");
-                    break;
-                case 3:
-                    Console.WriteLine("Жёлтый");
-                    break;
-                case 4:
-                    Console.WriteLine("Зеленый");
-                    break;
-                case 5:
-                    Console.WriteLine("Голубой");
-                    break;
-                case 6:
-                    Console.WriteLine("Синий");
-                    break;
-                case 7:
-                    Console.WriteLine("Фиолетовый");
-                    break;
-                default:
-                    Console.WriteLine("Введены неверные данные!");
-                    break;
+                duplicatText = string.Concat(myText[i], myText[i]);
+                Console.Write(duplicatText);
 
             }
+            Console.WriteLine();
 
+           
         }
     }
+    
 }
