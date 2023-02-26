@@ -44,13 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeFile1.cs" />
-    <Compile Include="CodeFile2.cs" />
+    <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Struct\UserInfo.cs" />
+    <Compile Include="Задание 2\IWrite.cs" />
+    <Compile Include="Задание 2\Accountant.cs" />
+    <Compile Include="Задание 2\Director.cs" />
+    <Compile Include="Задание 2\Worker.cs" />
+    <Compile Include="Задание 1\Circle.cs" />
+    <Compile Include="Задание 1\Figure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Задание 1\Rectangle.cs" />
+    <Compile Include="Задание 1\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
