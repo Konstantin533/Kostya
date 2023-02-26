@@ -14,7 +14,16 @@ namespace Listing01
         {
             Console.WriteLine($"Я {Name}");
         }
-       
+        public virtual double Perimetr()
+        {
+            return 0;
+        }
+
+        public virtual double Square()
+        {
+            return 0;
+        }
+
         public double SumPer(params double[] param)
         {
             for (int i = 0; i < param.Length; i++)

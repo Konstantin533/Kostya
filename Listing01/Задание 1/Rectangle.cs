@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace Listing01
 {
-    public class Rectangle : Circle
+    public class Rectangle : Figure
     {
         public override string Name { get; set; } = "Прямоугольник";
-        public virtual double Perimetr(int height, int weight)
+        public int Height { get; set; } 
+        public int Width { get; set; } 
+        public override double Perimetr()
         {
 
-            return 2 * (height + weight);
+            return 2 * (Height + Width);
         }
 
-        public virtual double Square(int height, int weight)
+        public override double Square()
         {
 
-            return height*weight;
+            return Height * Width;
         }
     }
 }

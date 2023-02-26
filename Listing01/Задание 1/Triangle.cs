@@ -10,19 +10,23 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Listing01
 {
-    public class  Triangle : Rectangle
+    public class  Triangle : Figure
     {
         public override string Name { get; set; } = "Треугольник";
+        public int Side { get; set; } 
+        public int SideOne { get; set; } 
+        public int SideTwo { get; set; } 
+        public int Height { get; set; }
+        public int Basis { get; set; }
 
-
-        public  double Perimetr(int side, int sideOne, int sideTwo)
+        public override  double Perimetr()
         {
-            return side + sideOne + sideTwo;
+            return Side + SideOne + SideTwo;
         }
 
-        public override double Square(int height, int basis)
+        public override double Square()
         {
-            return (height*basis)/2;
+            return (Height * Basis) /2;
         }
 
 

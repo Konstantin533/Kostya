@@ -12,21 +12,21 @@ namespace Listing01
 
             figure.ShowName();
 
-            var triangle = new Triangle();
+            var triangle = new Triangle() { Height = 10, Basis = 5, Side = 12,SideOne = 5, SideTwo = 20};
 
             triangle.ShowName();
-            Console.WriteLine("Периметр: " + triangle.Perimetr(11,10));
-            Console.WriteLine("Площадь: " + triangle.Square(5,7));
-            var circle = new Circle();
+            Console.WriteLine("Периметр: " + triangle.Perimetr());
+            Console.WriteLine("Площадь: " + triangle.Square());
+            var circle = new Circle() { R = 12};
             circle.ShowName();
-            Console.WriteLine("Периметр: " + circle.Perimetr(5));
-            Console.WriteLine("Площадь: " + circle.Square(7));
-            var rectangle = new Rectangle();
+            Console.WriteLine("Периметр: " + circle.Perimetr());
+            Console.WriteLine("Площадь: " + circle.Square());
+            var rectangle = new Rectangle() { Height= 10, Width = 5};
             rectangle.ShowName();
-            Console.WriteLine("Периметр: " + rectangle.Perimetr(5, 10));
-            Console.WriteLine("Площадь: " + rectangle.Square(6, 10));
+            Console.WriteLine("Периметр: " + rectangle.Perimetr());
+            Console.WriteLine("Площадь: " + rectangle.Square());
 
-           double result = figure.SumPer(triangle.Perimetr(11, 10), circle.Perimetr(5), rectangle.Perimetr(5, 10));
+           double result = figure.SumPer(triangle.Perimetr(), circle.Perimetr(), rectangle.Perimetr());
 
             Console.WriteLine("Сумма периметров всех фигур: " + result);
 
@@ -84,7 +84,7 @@ namespace Listing01
 
     //Задание Структуры 
 
-    var person = new UserInfo(0);
+            var person = new UserInfo(0);
             person.Name = "Игорь";
             person.Print();
 
