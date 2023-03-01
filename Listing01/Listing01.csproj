@@ -44,7 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Урок 10\Account.cs" />
+    <Compile Include="Урок 10\PasswordException.cs" />
+    <Compile Include="Задание 3\EnumReg.cs" />
     <Compile Include="Enum\Enum.cs" />
+    <Compile Include="Задание 3\Internals.cs" />
+    <Compile Include="Задание 3\IRegisterO.cs" />
+    <Compile Include="Задание 3\Register.cs" />
     <Compile Include="Struct\UserInfo.cs" />
     <Compile Include="Задание 2\IWrite.cs" />
     <Compile Include="Задание 2\Accountant.cs" />
