@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace Listing01
 {
@@ -134,7 +135,7 @@ namespace Listing01
 
             try
             {
-                Account.PasswordChecked("Admin", "qwe1rt", "qwe1rt");
+                Account.PasswordChecked("Admin", "qwert", "qwert");
             }
 
             catch (Exception ex)
