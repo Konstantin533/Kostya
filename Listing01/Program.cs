@@ -133,18 +133,33 @@ namespace Listing01
 
 
 
+            //try
+            //{
+            //    Account.PasswordChecked("Admin", "qwert", "qwert");
+            //}
+
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
             try
             {
-                Account.PasswordChecked("Admin", "qwert", "qwert");
-            }
+                var arrays = new GenericArrayClass<int>();
+                arrays.Add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+                Console.WriteLine();
+                arrays.GetElement(0);
+                arrays.AddNum(122);
+                arrays.GetElement(10);
 
+
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
-
-
+            Comparison<int> com = new Comparison<int>(1000, 100, 900);
+            Console.WriteLine(com.GreateThen());
         }
     }
 }
