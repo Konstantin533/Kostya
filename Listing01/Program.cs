@@ -161,7 +161,7 @@ namespace Listing01
             //Comparison<int> com = new Comparison<int>(1000, 100, 900);
             //Console.WriteLine(com.GreateThen());
 
-            WeakDay person = Weaks;
+            WeakDay weakDay = Weaks;
 
             void DisplayMessage(string message)
             {
@@ -186,22 +186,26 @@ namespace Listing01
 
             }
 
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
-            Console.WriteLine(person());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay()); 
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay()); 
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
+            Console.WriteLine(weakDay());
         }
     }
 }
