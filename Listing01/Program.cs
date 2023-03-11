@@ -142,24 +142,66 @@ namespace Listing01
             //{
             //    Console.WriteLine(ex.Message);
             //}
-            try
+            //try
+            //{
+            //    var arrays = new GenericArrayClass<int>();
+            //    arrays.Add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+            //    Console.WriteLine();
+            //    arrays.GetElement(0);
+            //    arrays.AddNum(122);
+            //    arrays.GetElement(10);
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            //Comparison<int> com = new Comparison<int>(1000, 100, 900);
+            //Console.WriteLine(com.GreateThen());
+
+            WeakDay person = Weaks;
+
+            void DisplayMessage(string message)
             {
-                var arrays = new GenericArrayClass<int>();
-                arrays.Add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-                Console.WriteLine();
-                arrays.GetElement(0);
-                arrays.AddNum(122);
-                arrays.GetElement(10);
+                Console.Write(message + " - ");
+            }
+
+            string Weaks()
+            {
+                var weather = new Weak();
+                weather.Notify += DisplayMessage;
+                string[] word = new string[] { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+
+
+                Weak.Sum();
+                if (Weak.Num == 7)
+                {
+                    Weak.Num = 0;
+                }
+                weather.Weather();
+                return word[Weak.Num];
 
 
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
 
-            Comparison<int> com = new Comparison<int>(1000, 100, 900);
-            Console.WriteLine(com.GreateThen());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
+            Console.WriteLine(person());
         }
     }
 }

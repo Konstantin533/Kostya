@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Урок 12\DelegateClass.cs" />
+    <Compile Include="Урок 12\Weak.cs" />
     <Compile Include="Урок 11\Задание 2\Comparison.cs" />
     <Compile Include="Урок 11\Задание 1\GenericArrayClass.cs" />
     <Compile Include="Урок 10\Account.cs" />
