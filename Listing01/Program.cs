@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Web.Helpers;
 
 namespace Listing01
 {
@@ -161,51 +164,70 @@ namespace Listing01
             //Comparison<int> com = new Comparison<int>(1000, 100, 900);
             //Console.WriteLine(com.GreateThen());
 
-            WeakDay weakDay = Weaks;
+            //WeakDay weakDay = Weaks;
 
-            void DisplayMessage(string message)
+            //void DisplayMessage(string message)
+            //{
+            //    Console.Write(message + " - ");
+            //}
+
+            //string Weaks()
+            //{
+            //    var weather = new Weak();
+            //    weather.Notify += DisplayMessage;
+            //    string[] word = new string[] { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
+
+
+            //    Weak.Sum();
+            //    if (Weak.Num == 7)
+            //    {
+            //        Weak.Num = 0;
+            //    }
+            //    weather.Weather();
+            //    return word[Weak.Num];
+
+
+            //}
+
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay()); 
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay()); 
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+            //Console.WriteLine(weakDay());
+
+
+
+            Mems[] mem = new Mems[]
+             {
+                new Mems("Molecule Man", 29, "Dan Jukes", new string[] { "Radiation resistance", "Turning tiny", "Radiation blast" }),
+                new Mems("Madame Uppercut", 39, "Jane Wilson", new string[] { "Million tonne punch", "Damage resistance", "Superhuman reflexs" }),
+                new Mems("Eternal Flame", 1000000, "Unknown", new string[] { "Immortality", "Heat Immunity", "Inferno","Teleportation","Interdimensional travel" })
+             };
+
+
+
+            
+            using (var fs = new FileStream("squad.json", FileMode.OpenOrCreate))
             {
-                Console.Write(message + " - ");
-            }
 
-            string Weaks()
-            {
-                var weather = new Weak();
-                weather.Notify += DisplayMessage;
-                string[] word = new string[] { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
-
-
-                Weak.Sum();
-                if (Weak.Num == 7)
-                {
-                    Weak.Num = 0;
-                }
-                weather.Weather();
-                return word[Weak.Num];
-
+                JsonSerializer.Serialize(fs, mem);
 
             }
-
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay()); 
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay()); 
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
-            Console.WriteLine(weakDay());
         }
     }
 }
