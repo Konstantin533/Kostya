@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Listing01
 {
-    public class Squad
+    public class Squad 
     {
-        public string SquadName { get; set; } = "Super hero squad";
-        public string HomeTown { get; set; } = "Metro City";
-        public int Formed { get; set; } = 2016;
+        public string SquadName { get; set; } 
 
-        public string SecretBase { get; set; } = "Super tower";
+        public string HomeTown { get; set; } 
+        public int Formed { get; set; } 
+
+        public string SecretBase { get; set; } 
 
         public bool Active { get; set; } = true;
+
+        public Member[] Members { get; set; }
 
         public Squad() { }
     }

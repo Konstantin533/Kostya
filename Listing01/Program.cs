@@ -211,21 +211,20 @@ namespace Listing01
             //Console.WriteLine(weakDay());
 
 
-
-            Mems[] mem = new Mems[]
-             {
-                new Mems("Molecule Man", 29, "Dan Jukes", new string[] { "Radiation resistance", "Turning tiny", "Radiation blast" }),
-                new Mems("Madame Uppercut", 39, "Jane Wilson", new string[] { "Million tonne punch", "Damage resistance", "Superhuman reflexs" }),
-                new Mems("Eternal Flame", 1000000, "Unknown", new string[] { "Immortality", "Heat Immunity", "Inferno","Teleportation","Interdimensional travel" })
-             };
-
-
-
             
+             var squ = new Squad();
+             Member[] memb = new Member[]
+             {
+                 new Member(),
+                 new Member(),
+                 new Member()
+             };
+             squ.Members = memb;
+
             using (var fs = new FileStream("squad.json", FileMode.OpenOrCreate))
             {
 
-                JsonSerializer.Serialize(fs, mem);
+                JsonSerializer.Serialize(fs, squ);
 
             }
         }

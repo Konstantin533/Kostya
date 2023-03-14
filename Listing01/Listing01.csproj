@@ -90,7 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Урок 13.1\Mems.cs" />
+    <Compile Include="Урок 13.1\Member.cs" />
     <Compile Include="Урок 13.1\Squad.cs" />
     <Compile Include="Урок 12\DelegateClass.cs" />
     <Compile Include="Урок 12\Weak.cs" />
